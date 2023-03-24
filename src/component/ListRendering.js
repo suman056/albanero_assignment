@@ -5,6 +5,8 @@ function ListRendering(props) {
   return (
     <div>{list}</div>
   )
+
+  
 }
 
 export default ListRendering
