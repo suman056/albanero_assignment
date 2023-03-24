@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
+import ConditionalRendering from './component/ConditionalRendering';
+import ElementVariableConditioningRendering from './component/ElementVariableConditioningRendering';
+import TueneryonditioningRendering from './component/TueneryonditioningRendering';
+import ShortCircuitConditioningRendering from './component/ShortCircuitConditioningRendering';
+import ComponentA from './component/ComponentA';
+import { UserProvider } from './component/UseContext';
 function App() {
   return (
+    <UserProvider value="suman">
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ConditionalRendering person={false}/>
+    <ElementVariableConditioningRendering condition={false}/>
+    <TueneryonditioningRendering condition={true}/>
+    <ShortCircuitConditioningRendering condition={false}/>
+    <ComponentA></ComponentA>
     </div>
+    </UserProvider>
   );
 }
 
