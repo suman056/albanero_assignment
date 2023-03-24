@@ -7,6 +7,7 @@ import ShortCircuitConditioningRendering from './component/ShortCircuitCondition
 import ComponentA from './component/ComponentA';
 import { UserProvider } from './component/UseContext';
 import ListRendering from './component/ListRendering';
+import UseEffect from './component/UseEffect';
 
 function App() {
   let nameList=[{
@@ -26,6 +27,7 @@ function App() {
     <ShortCircuitConditioningRendering condition={false}/>
     <ComponentA></ComponentA>
     <ListRendering value={nameList}/>
+    <UseEffect/>
     </div>
     </UserProvider>
   );
