@@ -6,7 +6,17 @@ import TueneryonditioningRendering from './component/TueneryonditioningRendering
 import ShortCircuitConditioningRendering from './component/ShortCircuitConditioningRendering';
 import ComponentA from './component/ComponentA';
 import { UserProvider } from './component/UseContext';
+import ListRendering from './component/ListRendering';
+
 function App() {
+  let nameList=[{
+    name:"suman",
+    place:"haldia"
+  },{
+    name:"arijit",
+    place:"howrah"
+  }
+]
   return (
     <UserProvider value="suman">
     <div className="App">
@@ -15,6 +25,7 @@ function App() {
     <TueneryonditioningRendering condition={true}/>
     <ShortCircuitConditioningRendering condition={false}/>
     <ComponentA></ComponentA>
+    <ListRendering value={nameList}/>
     </div>
     </UserProvider>
   );
